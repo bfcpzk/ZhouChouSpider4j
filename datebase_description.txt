@@ -1,0 +1,67 @@
+//support
+CREATE TABLE `zhongchou`.`support` (
+  `su_id` INT NOT NULL AUTO_INCREMENT,
+  `su_user_id` VARCHAR(100) NULL DEFAULT '',
+  `su_user_name` VARCHAR(100) NULL DEFAULT '',
+  `su_deal_id` VARCHAR(100) NULL DEFAULT '',
+  `su_deal_price` VARCHAR(100) NULL DEFAULT '',
+  `su_return_type` INT NULL DEFAULT 0,
+  `su_deal_num` VARCHAR(45) NULL DEFAULT '',
+  `su_pay_time` VARCHAR(100) NULL DEFAULT '',
+  PRIMARY KEY (`su_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+//comment
+CREATE TABLE `zhongchou`.`comment` (
+  `co_id` INT NOT NULL AUTO_INCREMENT,
+  `co_log_id` VARCHAR(100) NULL DEFAULT '',
+  `co_log_info` VARCHAR(4096) NULL DEFAULT '',
+  `co_deal_id` VARCHAR(100) NULL DEFAULT '',
+  `co_user_id` VARCHAR(100) NULL DEFAULT '',
+  `co_user_name` VARCHAR(100) NULL DEFAULT '',
+  `co_create_time` VARCHAR(45) NULL DEFAULT '',
+  `co_is_self` INT NULL DEFAULT 0,
+  PRIMARY KEY (`co_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+//update
+CREATE TABLE `zhongchou`.`update` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `up_id` VARCHAR(100) NULL DEFAULT '',
+  `up_log_info` VARCHAR(4096) NULL DEFAULT '',
+  `up_deal_id` VARCHAR(100) NULL DEFAULT '',
+  `up_user_id` VARCHAR(100) NULL DEFAULT '',
+  `up_user_name` VARCHAR(100) NULL DEFAULT '',
+  `up_create_time` VARCHAR(45) NULL DEFAULT '',
+  `up_is_self` INT NULL DEFAULT 0,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+//project
+CREATE TABLE `zhongchou`.`project` (
+  `p_id` INT NOT NULL AUTO_INCREMENT,
+  `pid` VARCHAR(45) NULL DEFAULT '',
+  `purl` VARCHAR(200) NULL DEFAULT '',
+  `pname` VARCHAR(1024) NULL DEFAULT '',
+  `pfounder` VARCHAR(100) NULL DEFAULT '',
+  `praised` VARCHAR(45) NULL DEFAULT '',
+  `pconcern_num` VARCHAR(45) NULL DEFAULT '',
+  `pgoal_money` VARCHAR(45) NULL DEFAULT '',
+  `pgy` VARCHAR(100) NULL DEFAULT '',
+  `paddr` VARCHAR(100) NULL DEFAULT '',
+  `plabel` VARCHAR(200) NULL DEFAULT '',
+  `pnonprofit_num` VARCHAR(45) NULL DEFAULT '',
+  `psupport_money` VARCHAR(200) NULL DEFAULT '',
+  `pupdate_num` VARCHAR(45) NULL DEFAULT '',
+  `pcomment_num` VARCHAR(45) NULL DEFAULT '',
+  `psupport_num` VARCHAR(45) NULL DEFAULT '',
+  `ptext` TEXT NULL,
+  `pcategory` VARCHAR(100) NULL DEFAULT '',
+  `ppercent` DOUBLE NULL DEFAULT 0.0,
+  `praise_cate_num` INT NULL DEFAULT 0,
+  PRIMARY KEY (`p_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
