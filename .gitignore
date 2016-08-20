@@ -1,0 +1,23 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+<<<<<<< HEAD
+/target
+.idea/*
+*.iml
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 552d0b2da5aa9233180fb4a4998d01c1a9b0c3a0
+=======
+
+>>>>>>> 552d0b2da5aa9233180fb4a4998d01c1a9b0c3a0
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
